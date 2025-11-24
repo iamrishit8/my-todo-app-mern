@@ -1,0 +1,21 @@
+.todo-list {
+  list-style: none;
+  margin: 16px 0 32px;
+}
+
+.empty-list {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-light);
+  box-shadow: var(--shadow);
+  margin: 24px 0;
+  animation: fadeIn 0.4s ease;
+}
+
+@media (max-width: 600px) {
+  .empty-list {
+    padding: 24px 16px;
+  }
+}

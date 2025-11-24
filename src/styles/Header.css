@@ -1,0 +1,62 @@
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters button {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.filters button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filters button.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .filters {
+    width: 100%;
+    justify-content: center;
+  }
+}

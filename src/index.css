@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans antialiased;
+  @apply bg-zenith-50 text-slate-900 dark:bg-zenith-950 dark:text-slate-50 transition-colors duration-300;
+  overflow-x: hidden;
+}
+
+/* Deep Space Aurora */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.dark .aurora-bg {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.05), transparent 25%);
+  opacity: 1;
+}
+
+.aurora-bg {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.03), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.03), transparent 25%);
+}
+
+/* Ultra Glass */
+.glass-panel {
+  @apply bg-white/70 dark:bg-[#121212]/70;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  @apply border border-slate-200/60 dark:border-white/5;
+  @apply shadow-xl shadow-slate-200/20 dark:shadow-black/50;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { 
+  @apply bg-slate-300 dark:bg-white/10 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover { 
+  @apply bg-slate-400 dark:bg-white/20;
+}
